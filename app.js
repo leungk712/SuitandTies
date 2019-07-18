@@ -1,3 +1,12 @@
+const navlinks = document.querySelectorAll('.nav-content a');
+const content = document.querySelectorAll('.content');
+const aboutSection = document.querySelector('#about');
+const selectionsSection = document.querySelector('#selections');
+const rentalsSection = document.querySelector('#rentals');
+const contactSection = document.querySelector('#contact');
+
+// Images
+
 let i = 0;
 let images = [];
 let time = 5000;
@@ -21,3 +30,19 @@ function changeImg(){
 }
 
 window.onload = changeImg;
+
+// Content
+
+for(let i = 0; i < navlinks.length; i++){
+  navlinks[i].addEventListener('click', () => {
+    console.log('clicked!');
+  });
+}
+
+function hideContent(){
+  content.classList.add('hide');
+}
+
+function hideImages(){
+  images.classList.add('hide');
+}
